@@ -6,14 +6,13 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 标记该字段是一个List,需要进一步查询
- * 如果value=""则自动取成员名称进行映射
+ * 标记该字段是一个由自定义对象组成的List,需要进一步查询
  * @author Link
  *
  */
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface AutoLinkListFill {
+public @interface AutoLinkObjListFill {
 	String sql();
 	String parameters() default "";
 }

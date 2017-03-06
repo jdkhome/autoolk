@@ -26,6 +26,33 @@ public class RsFillObjTools {
     }  
 	
 
+    /**
+     * 获取一个List的类型(比如List<Integer> 返回的是Integer.class)
+     * @param field
+     * @return 如果返回null 则说明获取失败
+     */
+    private static Class getListType(Field field){
+    	Class<?> fieldClass = field.getType();
+		if(!fieldClass.isAssignableFrom(List.class)){
+			//不是List类型，直接跳过
+			return null;
+		}
+		
+		Type fc = field.getGenericType();
+		if(fc == null) return null;
+		Class genericClazz;
+		if(fc instanceof ParameterizedType){   
+			//如果是泛型参数的类型   
+			ParameterizedType pt = (ParameterizedType) fc; 
+			// 得到泛型里的class类型对象。
+			genericClazz = (Class)pt.getActualTypeArguments()[0];   
+		}else{
+			return null;
+		}
+		
+    	return genericClazz;
+    }
+    
 	private static Object[] getParameters(Object object,String parametersName) throws NoSuchMethodException, SecurityException, Exception{
 		
 		//若没有设置参数
@@ -84,10 +111,11 @@ public class RsFillObjTools {
 			    		field.setAccessible(true);
 			    		//获取sql映射名
 			    		String sqlAsName=autoLinkFill.value().compareTo("")==0?field.getName():autoLinkFill.value();
-						
 			    		try {
 			    			field.set(object, rs.getObject(sqlAsName));
-						} catch (Exception e) {
+						} catch (java.lang.IllegalArgumentException e) {
+							System.out.println("Autoolk:查询语句中的["+sqlAsName+"]字段映射失败!请检查类["+clz+"]中,["+field.getName()+"]字段！");
+							e.printStackTrace();
 							//没有找到该列直接跳过
 							continue;
 						}
@@ -96,36 +124,74 @@ public class RsFillObjTools {
 			    	}
 			    }
 				
-				//填装AutoLinkListFill字段
+				//填装AutoLinkBasicListFill字段
 				for (Field field : fields) {
-			    	if(field.isAnnotationPresent(AutoLinkListFill.class)){
+			    	if(field.isAnnotationPresent(AutoLinkBasicListFill.class)){
+			    		AutoLinkBasicListFill autoLinkBasicListFill=(AutoLinkBasicListFill) field.getAnnotation(AutoLinkBasicListFill.class);
 			    		
-			    		Class<?> fieldClass = field.getType();
-			    		if(!fieldClass.isAssignableFrom(List.class)){
-			    			//不是List类型，直接跳过
-			    			continue;
-			    		}
+			    		field.setAccessible(true);
+			    		//获取List的类型，如果获取失败，则跳过
+			    		Class genericClazz=getListType(field);
+			    		if(genericClazz==null) continue;
+			    		//获取sql映射名
+			    		String sqlAsName=autoLinkBasicListFill.value().compareTo("")==0?field.getName():autoLinkBasicListFill.value();
+						
+			    		try {
+			    			
+			    			//这里要找到字段List的基础类型
+			    			List<Object> thisBasicList=new ArrayList<Object>();
+			    			
+			    			//内容为空直接跳过
+			    			if(rs.getObject(sqlAsName)==null){
+			    				continue;
+			    			}
+			    			
+			    			String thisBasicListStr[]=((String) rs.getObject(sqlAsName)).split(",");
+			    			
+			    			//转换类型并存到List
+			    			for(String thisBasic:thisBasicListStr){
+			    				if(genericClazz.equals(String.class)){
+			    					thisBasicList.add(thisBasic);
+			    				}else if(genericClazz.equals(Integer.class)){
+			    					thisBasicList.add(Integer.parseInt(thisBasic));
+			    				}else if(genericClazz.equals(Long.class)){
+			    					thisBasicList.add(Long.parseLong(thisBasic));
+			    				}else if(genericClazz.equals(Float.class)){
+			    					thisBasicList.add(Float.parseFloat(thisBasic));
+			    				}else if(genericClazz.equals(Double.class)){
+			    					thisBasicList.add(Double.parseDouble(thisBasic));
+			    				}else{
+			    					//暂时只支持这些类型，够了。。
+			    					continue;
+			    				}
+			    			}
+			    			
+			    			field.set(object, thisBasicList);
+			    			
+						} catch (Exception e) {
+							e.printStackTrace();
+							//没有找到该列直接跳过
+							continue;
+						}
+			    			
 			    		
-			    		Type fc = field.getGenericType();
-			    		if(fc == null) continue;
-			    		Class genericClazz;
-			    		if(fc instanceof ParameterizedType){   
-			    			//如果是泛型参数的类型   
-			    			ParameterizedType pt = (ParameterizedType) fc; 
-			    			// 得到泛型里的class类型对象。
-			    			genericClazz = (Class)pt.getActualTypeArguments()[0];   
-			    		}else{
-			    			continue;
-			    		}
+			    	}
+			    }
+				
+				//填装AutoLinkObjListFill字段
+				for (Field field : fields) {
+			    	if(field.isAnnotationPresent(AutoLinkObjListFill.class)){
 			    		
+			    		Class genericClazz=getListType(field);
+			    		if(genericClazz==null) continue;
 			    		
-			    		AutoLinkListFill autoLinkListFill=(AutoLinkListFill) field.getAnnotation(AutoLinkListFill.class);
+			    		AutoLinkObjListFill autoLinkObjListFill=(AutoLinkObjListFill) field.getAnnotation(AutoLinkObjListFill.class);
 			    		
 			    		field.setAccessible(true);
 			    		//获取查询语句
-			    		String sql=autoLinkListFill.sql();
+			    		String sql=autoLinkObjListFill.sql();
 			    		//获取参数对象
-			    		String parametersName=autoLinkListFill.parameters();
+			    		String parametersName=autoLinkObjListFill.parameters();
 			    		try{
 				    		//设置该List
 							field.set(object, sqlAutoFill(m_conn,sql, getParameters(object, parametersName), genericClazz));
