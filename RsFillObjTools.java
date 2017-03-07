@@ -6,6 +6,7 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -207,6 +208,32 @@ public class RsFillObjTools {
 		
 		return objectList;
 	}
+	
+	
+
+	/**
+	 * 
+	 * 专门用于count的方法
+	 * @param sql sql语句
+	 * @param parameters 参数
+	 * @param countAs count值的名称
+	 * @return
+	 * @throws SQLException 
+	 */
+	public static Long sql4Count(String sql, Object[] parameters,String countAs) throws SQLException{
+		
+		Map map=SqlHelper.executeQuery(null,sql, parameters);
+		ResultSet rs=(ResultSet) map.get("rs");
+		
+		while(rs.next()){
+			return (Long) rs.getObject(countAs);
+		}
+		
+		return 0L;
+		
+		
+	}
+	
 	
 	/**
 	 * 自动sql执行+填装
