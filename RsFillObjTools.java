@@ -197,7 +197,6 @@ public class RsFillObjTools {
 				    		//设置该List
 							field.set(object, sqlAutoFill(m_conn,sql, getParameters(object, parametersName), genericClazz));
 						}catch (Exception e) {
-							
 						}
 			    	}
 			    }
@@ -244,7 +243,7 @@ public class RsFillObjTools {
 	 * @throws Exception 
 	 * @throws NoSuchMethodException 
 	 */
-	public static List<Object> sqlAutoFill(Connection m_conn,String sql, Object[] parameters,Class<?> clz) throws NoSuchMethodException, Exception{
+	public static List sqlAutoFill(Connection m_conn,String sql, Object[] parameters,Class<?> clz) throws NoSuchMethodException, Exception{
 		try {
 			//如果是一个新的查询，则传来的m_conn应该是null
 			Connection thisConn=m_conn;
