@@ -32,7 +32,7 @@ public class RsFillObjTools {
      * @param field
      * @return 如果返回null 则说明获取失败
      */
-    private static Class getListType(Field field){
+    private static Class<?> getListType(Field field){
     	Class<?> fieldClass = field.getType();
 		if(!fieldClass.isAssignableFrom(List.class)){
 			//不是List类型，直接跳过
@@ -41,12 +41,12 @@ public class RsFillObjTools {
 		
 		Type fc = field.getGenericType();
 		if(fc == null) return null;
-		Class genericClazz;
+		Class<?> genericClazz;
 		if(fc instanceof ParameterizedType){   
 			//如果是泛型参数的类型   
 			ParameterizedType pt = (ParameterizedType) fc; 
 			// 得到泛型里的class类型对象。
-			genericClazz = (Class)pt.getActualTypeArguments()[0];   
+			genericClazz = (Class<?>)pt.getActualTypeArguments()[0];   
 		}else{
 			return null;
 		}
@@ -93,7 +93,7 @@ public class RsFillObjTools {
 		return null;
 	}
 	
-	private static List AutoFill(Connection m_conn,Class<?> clz,ResultSet rs) throws NoSuchMethodException, Exception{
+	private static List<Object> AutoFill(Connection m_conn,Class<?> clz,ResultSet rs) throws NoSuchMethodException, Exception{
 		
 		//返回实例
 		List<Object> objectList=new ArrayList<Object>();
@@ -132,7 +132,7 @@ public class RsFillObjTools {
 			    		
 			    		field.setAccessible(true);
 			    		//获取List的类型，如果获取失败，则跳过
-			    		Class genericClazz=getListType(field);
+			    		Class<?> genericClazz=getListType(field);
 			    		if(genericClazz==null) continue;
 			    		//获取sql映射名
 			    		String sqlAsName=autoLinkBasicListFill.value().compareTo("")==0?field.getName():autoLinkBasicListFill.value();
@@ -183,7 +183,7 @@ public class RsFillObjTools {
 				for (Field field : fields) {
 			    	if(field.isAnnotationPresent(AutoLinkObjListFill.class)){
 			    		
-			    		Class genericClazz=getListType(field);
+			    		Class<?> genericClazz=getListType(field);
 			    		if(genericClazz==null) continue;
 			    		
 			    		AutoLinkObjListFill autoLinkObjListFill=(AutoLinkObjListFill) field.getAnnotation(AutoLinkObjListFill.class);
@@ -222,7 +222,7 @@ public class RsFillObjTools {
 	 */
 	public static Long sql4Count(String sql, Object[] parameters,String countAs) throws SQLException{
 		
-		Map map=SqlHelper.executeQuery(null,sql, parameters);
+		Map<?, ?> map=SqlHelper.executeQuery(null,sql, parameters);
 		ResultSet rs=(ResultSet) map.get("rs");
 		
 		while(rs.next()){
@@ -244,15 +244,15 @@ public class RsFillObjTools {
 	 * @throws Exception 
 	 * @throws NoSuchMethodException 
 	 */
-	public static List sqlAutoFill(Connection m_conn,String sql, Object[] parameters,Class<?> clz) throws NoSuchMethodException, Exception{
+	public static List<Object> sqlAutoFill(Connection m_conn,String sql, Object[] parameters,Class<?> clz) throws NoSuchMethodException, Exception{
 		try {
 			//如果是一个新的查询，则传来的m_conn应该是null
 			Connection thisConn=m_conn;
 			
-			Map map=SqlHelper.executeQuery(m_conn,sql, parameters);
+			Map<?, ?> map=SqlHelper.executeQuery(m_conn,sql, parameters);
 			//保存 conn供子查询使用
 			m_conn=(Connection) map.get("conn");
-			List list=AutoFill(m_conn,clz,(ResultSet) map.get("rs"));
+			List<Object> list=AutoFill(m_conn,clz,(ResultSet) map.get("rs"));
 			
 			//总查询完成，关闭链接
 			if(thisConn==null){
