@@ -4,8 +4,7 @@
 特点是：<br>
 使用注解，减少了很多配置<br>
 
-<<<<<<< HEAD
-=======
+
 # 例子
 
 Constants.java
@@ -128,5 +127,3 @@ testOnReturn=false
 poolPreparedStatements=false
 maxPoolPreparedStatementPerConnectionSize=200
 ```
-
->>>>>>> origin/master
