@@ -64,9 +64,9 @@ public class City {
 
 查询List
 ```
-	List<City> cityList=RsFillObjTools.sqlAutoFill(null, Constants.SearchCity, new Object[] {16}, City.class);
+	List<City> cityList=RsFillObjTools.sqlAutoFill(null, Constants.SearchCity, new Object[] {142}, City.class);
 ```
-
+![image](https://github.com/jdkhome/autoolk/blob/master/debug_result.png?raw=true)
 
 pom.xml
 ```
