@@ -66,10 +66,9 @@ public class City {
 ```
 	List<City> cityList=RsFillObjTools.sqlAutoFill(null, Constants.SearchCity, new Object[] {142}, City.class);
 ```
+
 debug
-<div align=center>
-![result](https://github.com/jdkhome/autoolk/blob/master/debug_result.png?raw=true)
-</div>
+![image](https://github.com/jdkhome/autoolk/blob/master/debug_result.png?raw=true)
 
 pom.xml
 ```
