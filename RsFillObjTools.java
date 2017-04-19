@@ -1,5 +1,10 @@
 package com.jdkhome.autoolk;
 
+import com.jdkhome.autoolk.ann.*;
+import com.jdkhome.autoolk.dao.SqlHelper;
+import org.apache.commons.logging.impl.WeakHashtable;
+import org.apache.log4j.Logger;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.ParameterizedType;
@@ -7,9 +12,7 @@ import java.lang.reflect.Type;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * 自动填装
@@ -18,6 +21,7 @@ import java.util.Map;
  */
 public class RsFillObjTools {
 
+	private static Logger logger = Logger.getLogger(RsFillObjTools.class);
 	
 	// 把一个字符串的第一个字母大写、效率是最高的、  
     private static String getMethodName(String fildeName) throws Exception{  
@@ -113,9 +117,14 @@ public class RsFillObjTools {
 			    		//获取sql映射名
 			    		String sqlAsName=autoLinkFill.value().compareTo("")==0?field.getName():autoLinkFill.value();
 			    		try {
+
+			    			//TODO 这里需要能够自动转换Long和Integer
+
 			    			field.set(object, rs.getObject(sqlAsName));
-						} catch (java.lang.IllegalArgumentException e) {
-							System.out.println("Autoolk:查询语句中的["+sqlAsName+"]字段映射失败!请检查类["+clz+"]中,["+field.getName()+"]字段！");
+
+						} catch (IllegalArgumentException e) {
+							logger.error("Autoolk:查询语句中的["+sqlAsName+"]字段映射失败!请检查类["+clz+"]中,["+field.getName()+"]字段！");
+
 							e.printStackTrace();
 							//没有找到该列直接跳过
 							continue;
@@ -207,8 +216,94 @@ public class RsFillObjTools {
 		
 		return objectList;
 	}
-	
-	
+
+
+	/**
+	 * 插入(后面改成插入实体)
+	 * @param sql
+	 * @param parameters
+	 * @return
+	 */
+	public static Integer insert(String sql, Object[] parameters){
+		return SqlHelper.insert(sql,parameters);
+	}
+
+
+	/**
+	 * 插入对象
+	 * @param obj
+	 * @return
+	 */
+	public static Integer insert(Object obj,Class<?> clz) throws Exception {
+		//根据对象和注解拼出一个sql语句
+		StringBuffer sb=new StringBuffer();
+
+		//获取clz类的注解
+		AutoLinkPojo autoLinkPojo=(AutoLinkPojo) clz.getAnnotation(AutoLinkPojo.class);
+		//获取表名
+		String tableName=autoLinkPojo.value().compareTo("")==0?clz.getSimpleName():autoLinkPojo.value();
+		sb.append("insert into ").append(tableName);
+
+
+		Map<String,Object> tableFieldMap=new LinkedHashMap<String,Object>();
+
+		//获取实体类的所有属性，返回Field数组
+		Field[] fields = clz.getDeclaredFields();
+		for (Field field : fields) {
+			if(field.isAnnotationPresent(AutoLinkInsert.class)) {
+				AutoLinkInsert autoLinkInsert = (AutoLinkInsert) field.getAnnotation(AutoLinkInsert.class);
+				//获取表字段以及对应的值
+
+				//获取到参数对应字段
+				Object val=null;
+
+				Method m = null;
+				m = (Method) obj.getClass().getMethod("get" + getMethodName(field.getName()));
+				val = m.invoke(obj);// 调用getter方法获取属性值
+				if(val==null){
+					continue;
+				}
+				tableFieldMap.put(autoLinkInsert.value().compareTo("")==0?field.getName():autoLinkInsert.value(),val);
+			}
+		}
+		sb.append("(");
+		for (Iterator it =  tableFieldMap.keySet().iterator();it.hasNext();){
+			Object key = it.next();
+			sb.append(key).append(",");
+		}
+		//删除最后拼上去的逗号
+		sb.deleteCharAt(sb.length() - 1);
+		sb.append(")");
+		sb.append("value(");
+		for(int i=0;i<tableFieldMap.size();i++){
+			sb.append("?,");
+		}
+		//删除最后拼上去的逗号
+		sb.deleteCharAt(sb.length() - 1);
+		sb.append(")");
+
+		//构造参数
+		Object[] parameters=new Object[tableFieldMap.size()];
+		int i=0;
+		for (Iterator it =  tableFieldMap.keySet().iterator();it.hasNext();){
+			Object key = it.next();
+			parameters[i++]=tableFieldMap.get(key);
+
+		}
+
+		//插入
+		return insert(sb.toString(),parameters);
+	}
+
+	/**
+	 * 更新
+	 * @param sql
+	 * @param parameters
+	 * @throws SQLException
+	 */
+	public static Integer update(String sql, Object[] parameters){
+		return SqlHelper.update(sql, parameters);
+	}
 
 	/**
 	 * 
@@ -260,14 +355,14 @@ public class RsFillObjTools {
 			return list;
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("===========================");
-			System.out.println("sql="+sql);
-			System.out.print("parameters=");
+			logger.debug("===========================");
+			logger.debug("sql="+sql);
+			logger.debug("parameters=");
 			for(String s:(String[])parameters){
-				System.out.print(s+" ");
+				logger.debug(s+" ");
 			}
-			System.out.println("");
-			System.out.println("===========================");
+			logger.debug("");
+			logger.debug("===========================");
 			
 			
 		}

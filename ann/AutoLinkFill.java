@@ -1,4 +1,4 @@
-package com.jdkhome.autoolk;
+package com.jdkhome.autoolk.ann;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

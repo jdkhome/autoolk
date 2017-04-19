@@ -1,4 +1,4 @@
-package com.jdkhome.autoolk;
+package com.jdkhome.autoolk.dao;
 
 import java.io.IOException;
 import java.io.InputStream;

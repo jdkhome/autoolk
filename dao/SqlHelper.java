@@ -1,5 +1,5 @@
 
-package com.jdkhome.autoolk;
+package com.jdkhome.autoolk.dao;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
@@ -63,44 +63,75 @@ public class SqlHelper {
 		return cs;
 	}
 
+
 	/**
-	 * 处理多个update/delete/insert
-	 * TODO 暂时留着
+	 * 插入一条
 	 * @param sql
 	 * @param parameters
+	 * @return 正常返回主键id 失败返回null
 	 */
-	public static void executeUpdateMultiParams(String[] sql, String[][] parameters) {
+	public static Integer insert(String sql, Object[] parameters){
+		Connection conn=null;
+		PreparedStatement thisPs=null;
 		try {
-			// 获得连接
-			_Connection = getConnectionFromDruid();
-			// 可能传多条sql语句
-			_Connection.setAutoCommit(false);
-			for (int i = 0; i < sql.length; i++) {
-				if (parameters[i] != null) {
-					ps = _Connection.prepareStatement(sql[i]);
-					for (int j = 0; j < parameters[i].length; j++)
-						ps.setString(j + 1, parameters[i][j]);
+			conn =getConnectionFromDruid();
+			thisPs=conn.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);//获取一个新的PreparedStatement
+			if (parameters != null) {
+				for (int i = 0; i < parameters.length; i++) {
+					thisPs.setObject(i + 1, parameters[i]);
 				}
-				ps.executeUpdate();
 			}
-			_Connection.commit();
-		} catch (Exception e) {
+			thisPs.executeUpdate();
+           /* todo 不知道为啥取不到返回值
+           ResultSet resultSet=thisPs.getGeneratedKeys();
+            if(resultSet.next()){
+                return thisPs.getGeneratedKeys().getInt(1);
+            }*/
+            return null;
+
+
+		} catch (SQLException e) {
 			e.printStackTrace();
-			log.debug(e.getMessage());
-			try {
-				_Connection.rollback();
-			} catch (SQLException e1) {
-				e1.printStackTrace();
-				log.debug(e1.getMessage());
-			}
-			throw new RuntimeException(e.getMessage());
+			return null;
 		} finally {
-			// 关闭资源
-			close(rs, ps, _Connection);
+            //debug模式下输出sql语句
+            log.info(SQLUtils.getPreparedSQL(sql,parameters));
+
+            //关闭连接
+            closeDruild(conn);
 		}
 	}
 
+	/**
+	 * 更新
+	 * @param sql
+	 * @param parameters
+	 * @return
+	 */
+	public static Integer update(String sql, Object[] parameters){
+		Connection conn=null;
+		PreparedStatement thisPs=null;
+		try {
+			conn =getConnectionFromDruid();
+			thisPs=conn.prepareStatement(sql);//获取一个新的PreparedStatement
+			if (parameters != null) {
+				for (int i = 0; i < parameters.length; i++) {
+					thisPs.setObject(i + 1, parameters[i]);
+				}
+			}
+			return thisPs.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return 0;
+		} finally {
 
+		    //debug模式下输出sql语句
+            log.debug(SQLUtils.getPreparedSQL(sql,parameters));
+
+            //关闭连接
+            closeDruild(conn);
+		}
+	}
 
 	/**
 	 * 查询
@@ -127,7 +158,11 @@ public class SqlHelper {
 			log.debug(e.getMessage());
 			throw new RuntimeException(e.getMessage());
 		} finally {
+            //debug模式下输出sql语句
+            log.debug(SQLUtils.getPreparedSQL(sql,parameters));
 		}
+
+		//将查询结果和连接都返回出去，外部可以继续使用链接
 		Map< String, Object> mapCR=new HashMap< String, Object>();
 		mapCR.put("rs", rs);
 		mapCR.put("conn", conn);
