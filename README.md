@@ -1,11 +1,12 @@
-# autoolk 一个简单的数据库查询框架
+# autoolk 一个简单的java-mysql框架
 主要功能是：<br>
 将sql语句查询的到结果，自动转换成对应的实体对象List，支持1对多的关系(即1个实体中有另一个实体的List)<br>
+表和类进行映射，直接插入实体
 特点是：<br>
-使用注解，减少了很多配置<br>
+使用注解，无需更多配置<br>
 
 
-# 例子
+# 查询例子
 
 Constants.java
 ```
@@ -67,8 +68,11 @@ public class City {
 	List<City> cityList=RsFillObjTools.sqlAutoFill(null, Constants.SearchCity, new Object[] {142}, City.class);
 ```
 
-debug
+debug<br>
 ![image](https://github.com/jdkhome/autoolk/blob/master/debug_result.png?raw=true)
+
+# 插入/更新/删除 例子
+空了完善..
 
 pom.xml
 ```
