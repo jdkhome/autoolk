@@ -52,6 +52,7 @@ public class Autoolk {
                     field.setAccessible(true);
                     //获取sql映射名
                     String sqlAsName = autoLinkFill.value().compareTo("") == 0 ? field.getName() : autoLinkFill.value();
+                    sqlAsName=sqlAsName.toLowerCase();
                     try {
 
                         field.set(object, map.get(sqlAsName));
@@ -79,7 +80,7 @@ public class Autoolk {
                     if (genericClazz == null) continue;
                     //获取sql映射名
                     String sqlAsName = autoLinkBasicListFill.value().compareTo("") == 0 ? field.getName() : autoLinkBasicListFill.value();
-
+                    sqlAsName=sqlAsName.toLowerCase();
                     try {
 
                         //这里要找到字段List的基础类型
@@ -183,7 +184,8 @@ public class Autoolk {
             Map<String, Object> obj = new TreeMap<String, Object>();
 
             for(String header:headerList){
-                obj.put(header,rs.getObject(header));
+                //保存小写
+                obj.put(header.toLowerCase(),rs.getObject(header));
             }
             result.add(obj);
         }
