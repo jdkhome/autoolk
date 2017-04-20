@@ -231,11 +231,11 @@ public class RsFillObjTools {
 		int columns=liedata.getColumnCount();
 
 		for(int i=1;i<=columns;i++){
-			headerList.add(liedata.getColumnName(i));
+			headerList.add(liedata.getColumnLabel(i));
 		}
 
 		while(rs.next()){
-			Map<String, Object> obj = new HashMap<String, Object>();
+			Map<String, Object> obj = new TreeMap<String, Object>();
 
 			for(String header:headerList){
 				obj.put(header,rs.getObject(header));

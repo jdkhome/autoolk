@@ -554,3 +554,19 @@
 2017-04-20 11:43:20,086DEBUG [com.jdkhome.autoolk.dao.SqlHelper.update(SqlHelper.java:124)] UPDATE city SET city.region_name =  '城市asd'  WHERE region_id =  '2333' 
 
 2017-04-20 11:43:42,732DEBUG [com.jdkhome.autoolk.dao.SqlHelper.update(SqlHelper.java:124)] DELETE FROM city WHERE region_id =  '2333' 
+
+2017-04-20 11:58:52,954INFO [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669)] {dataSource-1} inited
+
+2017-04-20 11:58:53,096DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:157)] SELECT city.region_id as `id`, city.region_name as `name` FROM city
+
+2017-04-20 11:59:44,750INFO [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669)] {dataSource-1} inited
+
+2017-04-20 11:59:44,873DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:157)] SELECT city.region_id as `id`, city.region_name as `name` FROM city
+
+2017-04-20 12:01:16,993INFO [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669)] {dataSource-1} inited
+
+2017-04-20 12:01:17,117DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:157)] SELECT city.region_id as `id`, city.region_name as `name` FROM city
+
+2017-04-20 12:02:05,772INFO [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669)] {dataSource-1} inited
+
+2017-04-20 12:02:05,895DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:157)] SELECT city.region_id as `id`, city.region_name FROM city

@@ -231,7 +231,7 @@ public class RsFillObjTools {
 		int columns=liedata.getColumnCount();
 
 		for(int i=1;i<=columns;i++){
-			headerList.add(liedata.getColumnName(i));
+			headerList.add(liedata.getColumnLabel(i));
 		}
 
 		while(rs.next()){
