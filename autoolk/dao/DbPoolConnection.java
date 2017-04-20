@@ -1,13 +1,13 @@
 package com.jdkhome.autoolk.dao;
 
+import com.alibaba.druid.pool.DruidDataSource;
+import com.alibaba.druid.pool.DruidDataSourceFactory;
+import com.alibaba.druid.pool.DruidPooledConnection;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.SQLException;
 import java.util.Properties;
-
-import com.alibaba.druid.pool.DruidDataSource;
-import com.alibaba.druid.pool.DruidDataSourceFactory;
-import com.alibaba.druid.pool.DruidPooledConnection;
 
 public class DbPoolConnection {
 	private static DbPoolConnection databasePool = null;
@@ -36,7 +36,7 @@ public class DbPoolConnection {
 	    }
 	
 	private DbPoolConnection() {}
-	public static  DbPoolConnection getInstance() {
+	public static DbPoolConnection getInstance() {
 		if (null == databasePool) {
 			databasePool = new DbPoolConnection();
 		}

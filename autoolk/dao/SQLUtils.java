@@ -4,7 +4,6 @@ import com.mysql.jdbc.PreparedStatement;
 
 import java.sql.Date;
 import java.sql.SQLException;
-import java.text.SimpleDateFormat;
 
 /**
  * Created by Link on 2017/4/18.
@@ -66,6 +65,6 @@ public class SQLUtils {
 
     //java 时间 转 sql 时间
     private static Date javaDate2MysqlDate(java.util.Date javaDate){
-        return new java.sql.Date(javaDate.getTime());
+        return new Date(javaDate.getTime());
     }
 }

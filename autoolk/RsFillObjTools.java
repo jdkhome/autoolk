@@ -2,7 +2,6 @@ package com.jdkhome.autoolk;
 
 import com.jdkhome.autoolk.ann.*;
 import com.jdkhome.autoolk.dao.SqlHelper;
-import org.apache.commons.logging.impl.WeakHashtable;
 import org.apache.log4j.Logger;
 
 import java.lang.reflect.Field;
@@ -11,6 +10,7 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.*;
 
@@ -217,6 +217,35 @@ public class RsFillObjTools {
 		return objectList;
 	}
 
+
+	public static List<Map<String,Object>> select(String sql, Object[] parameters) throws SQLException {
+		Map<?, ?> map=SqlHelper.executeQuery(null,sql, parameters);
+		ResultSet rs=(ResultSet) map.get("rs");
+
+		List<Map<String,Object>> result=new ArrayList<Map<String, Object>>();
+
+		//获取表头
+		List<String> headerList=new ArrayList<String>();
+
+		ResultSetMetaData liedata=rs.getMetaData();//获取 列信息
+		int columns=liedata.getColumnCount();
+
+		for(int i=1;i<=columns;i++){
+			headerList.add(liedata.getColumnName(i));
+		}
+
+		while(rs.next()){
+			Map<String, Object> obj = new TreeMap<String, Object>();
+
+			for(String header:headerList){
+				obj.put(header,rs.getObject(header));
+			}
+			result.add(obj);
+		}
+
+
+		return result;
+	}
 
 	/**
 	 * 插入(后面改成插入实体)
