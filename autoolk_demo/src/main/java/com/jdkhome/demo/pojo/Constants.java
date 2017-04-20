@@ -14,4 +14,6 @@ public class Constants {
 
     public static final String DeleteCity="DELETE FROM city WHERE region_id = ?";
 
+    public static final String CountCity="SELECT count(1) as `count` FROM city";
+
 }

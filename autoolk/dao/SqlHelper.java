@@ -130,17 +130,15 @@ public class SqlHelper {
 
 	/**
 	 * 查询
-	 * 可使用现有连接进行查询，若现有连接为null，则从新从连接池申请资源
-	 * @param m_conn 现有连接
 	 * @param sql sql语句
 	 * @param parameters 参数
 	 * @return 返回ResultSet和Connection 外部根据需求自行关闭连接
 	 */
-	public static Map< String, Object> executeQuery(Connection m_conn,String sql, Object[] parameters) {
+	public static Map< String, Object> executeQuery(String sql, Object[] parameters) {
 		ResultSet rs = null;
 		Connection  conn=null;
 		try {
-			conn =(m_conn==null)?getConnectionFromDruid():m_conn;
+			conn =getConnectionFromDruid();
 			PreparedStatement thisPs=conn.prepareStatement(sql);//获取一个新的PreparedStatement
 			if (parameters != null) {
 				for (int i = 0; i < parameters.length; i++) {

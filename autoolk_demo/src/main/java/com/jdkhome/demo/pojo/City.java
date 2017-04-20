@@ -29,6 +29,13 @@ public class City {
     @AutoLinkObjListFill(sql = Constants.SearchNextCity,parameters="regionId")
     List<City> nextCity;
 
+    //构造
+    public City(){}
+    public City(Integer regionId,String regionName){
+        this.regionId=regionId;
+        this.regionName=regionName;
+    }
+
     public Integer getRegionId() {
         return regionId;
     }
