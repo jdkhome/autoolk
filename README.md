@@ -5,7 +5,7 @@
 # 例子
 
 ```
-	//任意查询 适用于 只查询少量字段的情况
+	    //任意查询
         List<Map<String,Object>> result= Autoolk.select(Constants.SearchAllCity,new Object[]{});
 
         //查询实体
@@ -48,7 +48,7 @@ public class Constants {
 @AutoLinkPojo
 public class City {
 
-    @AutoLinkInsert("region_id")
+    @AutoLinkInsert(value = "region_id",primarykey = true)
     @AutoLinkFill("id")
     Integer regionId;
 

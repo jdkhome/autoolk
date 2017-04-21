@@ -13,7 +13,7 @@ import java.util.List;
 @AutoLinkPojo
 public class City {
 
-    @AutoLinkInsert("region_id")
+    @AutoLinkInsert(value = "region_id",primarykey = true)
     @AutoLinkFill("id")
     Integer regionId;
 

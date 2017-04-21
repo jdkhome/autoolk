@@ -14,7 +14,8 @@ public class Test {
 
     public static void main(String[] args) throws Exception {
 
-        //任意查询 适用于 只查询少量字段的情况
+
+        //任意查询
         List<Map<String,Object>> result= Autoolk.select(Constants.SearchAllCity,new Object[]{});
 
         //查询实体

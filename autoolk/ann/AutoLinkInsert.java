@@ -14,4 +14,5 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface AutoLinkInsert {
     String value() default "";
+    boolean primarykey() default false;
 }

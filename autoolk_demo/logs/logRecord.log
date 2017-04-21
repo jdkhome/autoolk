@@ -2118,3 +2118,615 @@
 2017-04-20 14:58:00,640DEBUG [com.jdkhome.autoolk.dao.SqlHelper.update(SqlHelper.java:124)] DELETE FROM city WHERE region_id =  '2333' 
 
 2017-04-20 14:58:00,655DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT count(1) as `count` FROM city
+
+2017-04-20 17:19:10,811INFO [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669)] {dataSource-1} inited
+
+2017-04-20 17:19:10,900DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT * FROM userbots
+
+2017-04-20 17:20:03,886DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id as `id`, city.region_name as `name` FROM city
+
+2017-04-20 17:20:07,453DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.region_id =  '142' 
+
+2017-04-20 17:20:07,478DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '142' 
+
+2017-04-20 17:20:07,498DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1708' 
+
+2017-04-20 17:20:07,520DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420201' 
+
+2017-04-20 17:20:07,535DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420202' 
+
+2017-04-20 17:20:07,582DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420203' 
+
+2017-04-20 17:20:07,597DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420204' 
+
+2017-04-20 17:20:07,621DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420205' 
+
+2017-04-20 17:20:07,646DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420206' 
+
+2017-04-20 17:20:07,677DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420299' 
+
+2017-04-20 17:20:07,693DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651566' 
+
+2017-04-20 17:20:07,708DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1706' 
+
+2017-04-20 17:20:07,724DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420301' 
+
+2017-04-20 17:20:07,743DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420302' 
+
+2017-04-20 17:20:07,758DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420303' 
+
+2017-04-20 17:20:07,783DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420304' 
+
+2017-04-20 17:20:07,799DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420305' 
+
+2017-04-20 17:20:07,815DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420306' 
+
+2017-04-20 17:20:07,830DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420307' 
+
+2017-04-20 17:20:07,845DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420308' 
+
+2017-04-20 17:20:07,859DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420309' 
+
+2017-04-20 17:20:07,874DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420399' 
+
+2017-04-20 17:20:07,909DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1702' 
+
+2017-04-20 17:20:07,949DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420401' 
+
+2017-04-20 17:20:07,964DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420402' 
+
+2017-04-20 17:20:07,985DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420403' 
+
+2017-04-20 17:20:08,000DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420404' 
+
+2017-04-20 17:20:08,016DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420405' 
+
+2017-04-20 17:20:08,030DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420406' 
+
+2017-04-20 17:20:08,045DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420407' 
+
+2017-04-20 17:20:08,060DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420408' 
+
+2017-04-20 17:20:08,074DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420499' 
+
+2017-04-20 17:20:08,089DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1714' 
+
+2017-04-20 17:20:08,110DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420509' 
+
+2017-04-20 17:20:08,128DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420501' 
+
+2017-04-20 17:20:08,143DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420502' 
+
+2017-04-20 17:20:08,157DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420503' 
+
+2017-04-20 17:20:08,172DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420504' 
+
+2017-04-20 17:20:08,187DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420505' 
+
+2017-04-20 17:20:08,202DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420506' 
+
+2017-04-20 17:20:08,218DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420507' 
+
+2017-04-20 17:20:08,233DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420508' 
+
+2017-04-20 17:20:08,247DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420599' 
+
+2017-04-20 17:20:08,263DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1709' 
+
+2017-04-20 17:20:08,279DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651515' 
+
+2017-04-20 17:20:08,294DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651516' 
+
+2017-04-20 17:20:08,308DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651517' 
+
+2017-04-20 17:20:08,326DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651518' 
+
+2017-04-20 17:20:08,341DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651519' 
+
+2017-04-20 17:20:08,356DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651520' 
+
+2017-04-20 17:20:08,371DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651521' 
+
+2017-04-20 17:20:08,386DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651522' 
+
+2017-04-20 17:20:08,400DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651523' 
+
+2017-04-20 17:20:08,414DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651524' 
+
+2017-04-20 17:20:08,438DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651525' 
+
+2017-04-20 17:20:08,473DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651526' 
+
+2017-04-20 17:20:08,487DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651527' 
+
+2017-04-20 17:20:08,501DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651546' 
+
+2017-04-20 17:20:08,514DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1704' 
+
+2017-04-20 17:20:08,544DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420701' 
+
+2017-04-20 17:20:08,587DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420702' 
+
+2017-04-20 17:20:08,615DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420703' 
+
+2017-04-20 17:20:08,630DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420704' 
+
+2017-04-20 17:20:08,645DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420705' 
+
+2017-04-20 17:20:08,661DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420799' 
+
+2017-04-20 17:20:08,691DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1710' 
+
+2017-04-20 17:20:08,712DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420801' 
+
+2017-04-20 17:20:08,735DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420802' 
+
+2017-04-20 17:20:08,754DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420803' 
+
+2017-04-20 17:20:08,777DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420899' 
+
+2017-04-20 17:20:08,793DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1705' 
+
+2017-04-20 17:20:08,810DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420901' 
+
+2017-04-20 17:20:08,824DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420902' 
+
+2017-04-20 17:20:08,844DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420903' 
+
+2017-04-20 17:20:08,859DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420904' 
+
+2017-04-20 17:20:08,876DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420905' 
+
+2017-04-20 17:20:08,890DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420906' 
+
+2017-04-20 17:20:08,936DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420907' 
+
+2017-04-20 17:20:08,957DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420999' 
+
+2017-04-20 17:20:08,973DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1712' 
+
+2017-04-20 17:20:08,992DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421001' 
+
+2017-04-20 17:20:09,009DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421002' 
+
+2017-04-20 17:20:09,027DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1711' 
+
+2017-04-20 17:20:09,045DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421004' 
+
+2017-04-20 17:20:09,061DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421005' 
+
+2017-04-20 17:20:09,074DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421006' 
+
+2017-04-20 17:20:09,093DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421007' 
+
+2017-04-20 17:20:09,111DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421008' 
+
+2017-04-20 17:20:09,126DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421009' 
+
+2017-04-20 17:20:09,140DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421010' 
+
+2017-04-20 17:20:09,164DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421099' 
+
+2017-04-20 17:20:09,180DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1713' 
+
+2017-04-20 17:20:09,197DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421101' 
+
+2017-04-20 17:20:09,212DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421102' 
+
+2017-04-20 17:20:09,227DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421103' 
+
+2017-04-20 17:20:09,241DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421104' 
+
+2017-04-20 17:20:09,256DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421105' 
+
+2017-04-20 17:20:09,280DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421106' 
+
+2017-04-20 17:20:09,298DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421199' 
+
+2017-04-20 17:20:09,315DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '14212' 
+
+2017-04-20 17:20:09,354DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421201' 
+
+2017-04-20 17:20:09,372DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421202' 
+
+2017-04-20 17:20:09,388DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421299' 
+
+2017-04-20 17:20:09,402DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '14213' 
+
+2017-04-20 17:20:09,417DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421301' 
+
+2017-04-20 17:20:09,464DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421302' 
+
+2017-04-20 17:20:09,481DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421303' 
+
+2017-04-20 17:20:09,496DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421304' 
+
+2017-04-20 17:20:09,519DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421305' 
+
+2017-04-20 17:20:09,540DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421306' 
+
+2017-04-20 17:20:09,555DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421307' 
+
+2017-04-20 17:20:09,570DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421308' 
+
+2017-04-20 17:20:09,588DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421399' 
+
+2017-04-20 17:20:09,604DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1707' 
+
+2017-04-20 17:20:09,623DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '14215' 
+
+2017-04-20 17:20:09,638DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '14216' 
+
+2017-04-20 17:20:09,652DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '14217' 
+
+2017-04-20 17:20:09,667DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '9917' 
+
+2017-04-20 17:20:09,683DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '16' 
+
+2017-04-20 17:20:09,697DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651502' 
+
+2017-04-20 17:20:09,711DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651503' 
+
+2017-04-20 17:20:09,728DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651504' 
+
+2017-04-20 17:20:09,743DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651505' 
+
+2017-04-20 17:20:09,757DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651506' 
+
+2017-04-20 17:20:09,780DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651507' 
+
+2017-04-20 17:20:09,798DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651508' 
+
+2017-04-20 17:20:09,814DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651509' 
+
+2017-04-20 17:20:09,828DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651510' 
+
+2017-04-20 17:20:09,843DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651511' 
+
+2017-04-20 17:20:09,858DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651512' 
+
+2017-04-20 17:20:09,876DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651513' 
+
+2017-04-20 17:20:09,908DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651514' 
+
+2017-04-20 17:20:09,941DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651545' 
+
+2017-04-20 17:20:10,032INFO [com.jdkhome.autoolk.dao.SqlHelper.insert(SqlHelper.java:93)] insert into City(region_id,region_name)value( '2333' , '测试城市' )
+
+2017-04-20 17:20:10,047DEBUG [com.jdkhome.autoolk.dao.SqlHelper.update(SqlHelper.java:124)] UPDATE city SET city.region_name =  '城市asd'  WHERE region_id =  '2333' 
+
+2017-04-20 17:20:10,061DEBUG [com.jdkhome.autoolk.dao.SqlHelper.update(SqlHelper.java:124)] DELETE FROM city WHERE region_id =  '2333' 
+
+2017-04-20 17:20:10,075DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT count(1) as `count` FROM city
+
+2017-04-20 17:21:43,160INFO [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669)] {dataSource-1} inited
+
+2017-04-20 17:21:43,286DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.region_id =  '142' 
+
+2017-04-20 17:21:43,347DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '142' 
+
+2017-04-20 17:21:43,375DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1708' 
+
+2017-04-20 17:21:43,393DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420201' 
+
+2017-04-20 17:21:43,411DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420202' 
+
+2017-04-20 17:21:43,429DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420203' 
+
+2017-04-20 17:21:43,447DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420204' 
+
+2017-04-20 17:21:43,466DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420205' 
+
+2017-04-20 17:21:43,486DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420206' 
+
+2017-04-20 17:21:43,506DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420299' 
+
+2017-04-20 17:21:43,524DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651566' 
+
+2017-04-20 17:21:43,542DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1706' 
+
+2017-04-20 17:21:43,566DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420301' 
+
+2017-04-20 17:21:43,583DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420302' 
+
+2017-04-20 17:21:43,601DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420303' 
+
+2017-04-20 17:21:43,621DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420304' 
+
+2017-04-20 17:21:43,640DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420305' 
+
+2017-04-20 17:21:43,658DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420306' 
+
+2017-04-20 17:21:43,676DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420307' 
+
+2017-04-20 17:21:43,694DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420308' 
+
+2017-04-20 17:21:43,711DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420309' 
+
+2017-04-20 17:21:43,729DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420399' 
+
+2017-04-20 17:21:43,745DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1702' 
+
+2017-04-20 17:21:43,763DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420401' 
+
+2017-04-20 17:21:43,780DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420402' 
+
+2017-04-20 17:21:43,798DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420403' 
+
+2017-04-20 17:21:43,813DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420404' 
+
+2017-04-20 17:21:43,831DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420405' 
+
+2017-04-20 17:21:43,849DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420406' 
+
+2017-04-20 17:21:43,866DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420407' 
+
+2017-04-20 17:21:43,885DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420408' 
+
+2017-04-20 17:21:43,902DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420499' 
+
+2017-04-20 17:21:43,923DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1714' 
+
+2017-04-20 17:21:43,941DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420509' 
+
+2017-04-20 17:21:43,959DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420501' 
+
+2017-04-20 17:21:43,976DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420502' 
+
+2017-04-20 17:21:43,993DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420503' 
+
+2017-04-20 17:21:44,011DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420504' 
+
+2017-04-20 17:21:44,028DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420505' 
+
+2017-04-20 17:21:44,046DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420506' 
+
+2017-04-20 17:21:44,062DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420507' 
+
+2017-04-20 17:21:44,080DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420508' 
+
+2017-04-20 17:21:44,096DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420599' 
+
+2017-04-20 17:21:44,114DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1709' 
+
+2017-04-20 17:21:44,132DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651515' 
+
+2017-04-20 17:21:44,148DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651516' 
+
+2017-04-20 17:21:44,166DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651517' 
+
+2017-04-20 17:21:44,184DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651518' 
+
+2017-04-20 17:21:44,201DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651519' 
+
+2017-04-20 17:21:44,219DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651520' 
+
+2017-04-20 17:21:44,236DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651521' 
+
+2017-04-20 17:21:44,254DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651522' 
+
+2017-04-20 17:21:44,272DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651523' 
+
+2017-04-20 17:21:44,289DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651524' 
+
+2017-04-20 17:21:44,307DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651525' 
+
+2017-04-20 17:21:44,324DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651526' 
+
+2017-04-20 17:21:44,342DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651527' 
+
+2017-04-20 17:21:44,361DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651546' 
+
+2017-04-20 17:21:44,377DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1704' 
+
+2017-04-20 17:21:44,394DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420701' 
+
+2017-04-20 17:21:44,412DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420702' 
+
+2017-04-20 17:21:44,430DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420703' 
+
+2017-04-20 17:21:44,448DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420704' 
+
+2017-04-20 17:21:44,466DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420705' 
+
+2017-04-20 17:21:44,484DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420799' 
+
+2017-04-20 17:21:44,502DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1710' 
+
+2017-04-20 17:21:44,521DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420801' 
+
+2017-04-20 17:21:44,538DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420802' 
+
+2017-04-20 17:21:44,556DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420803' 
+
+2017-04-20 17:21:44,574DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420899' 
+
+2017-04-20 17:21:44,591DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1705' 
+
+2017-04-20 17:21:44,609DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420901' 
+
+2017-04-20 17:21:44,627DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420902' 
+
+2017-04-20 17:21:44,644DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420903' 
+
+2017-04-20 17:21:44,662DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420904' 
+
+2017-04-20 17:21:44,680DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420905' 
+
+2017-04-20 17:21:44,698DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420906' 
+
+2017-04-20 17:21:44,715DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420907' 
+
+2017-04-20 17:21:44,733DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1420999' 
+
+2017-04-20 17:21:44,750DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1712' 
+
+2017-04-20 17:21:44,769DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421001' 
+
+2017-04-20 17:21:44,786DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421002' 
+
+2017-04-20 17:21:44,803DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1711' 
+
+2017-04-20 17:21:44,821DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421004' 
+
+2017-04-20 17:21:44,839DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421005' 
+
+2017-04-20 17:21:44,856DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421006' 
+
+2017-04-20 17:21:44,875DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421007' 
+
+2017-04-20 17:21:44,893DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421008' 
+
+2017-04-20 17:21:44,910DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421009' 
+
+2017-04-20 17:21:44,925DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421010' 
+
+2017-04-20 17:21:44,944DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421099' 
+
+2017-04-20 17:21:44,962DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1713' 
+
+2017-04-20 17:21:44,977DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421101' 
+
+2017-04-20 17:21:44,994DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421102' 
+
+2017-04-20 17:21:45,011DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421103' 
+
+2017-04-20 17:21:45,030DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421104' 
+
+2017-04-20 17:21:45,047DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421105' 
+
+2017-04-20 17:21:45,065DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421106' 
+
+2017-04-20 17:21:45,082DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421199' 
+
+2017-04-20 17:21:45,101DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '14212' 
+
+2017-04-20 17:21:45,119DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421201' 
+
+2017-04-20 17:21:45,135DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421202' 
+
+2017-04-20 17:21:45,151DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421299' 
+
+2017-04-20 17:21:45,169DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '14213' 
+
+2017-04-20 17:21:45,186DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421301' 
+
+2017-04-20 17:21:45,202DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421302' 
+
+2017-04-20 17:21:45,218DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421303' 
+
+2017-04-20 17:21:45,236DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421304' 
+
+2017-04-20 17:21:45,253DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421305' 
+
+2017-04-20 17:21:45,271DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421306' 
+
+2017-04-20 17:21:45,287DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421307' 
+
+2017-04-20 17:21:45,304DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421308' 
+
+2017-04-20 17:21:45,322DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1421399' 
+
+2017-04-20 17:21:45,339DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1707' 
+
+2017-04-20 17:21:45,356DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '14215' 
+
+2017-04-20 17:21:45,373DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '14216' 
+
+2017-04-20 17:21:45,390DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '14217' 
+
+2017-04-20 17:21:45,407DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '9917' 
+
+2017-04-20 17:21:45,423DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '16' 
+
+2017-04-20 17:21:45,440DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651502' 
+
+2017-04-20 17:21:45,458DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651503' 
+
+2017-04-20 17:21:45,476DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651504' 
+
+2017-04-20 17:21:45,493DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651505' 
+
+2017-04-20 17:21:45,511DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651506' 
+
+2017-04-20 17:21:45,529DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651507' 
+
+2017-04-20 17:21:45,547DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651508' 
+
+2017-04-20 17:21:45,564DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651509' 
+
+2017-04-20 17:21:45,582DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651510' 
+
+2017-04-20 17:21:45,600DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651511' 
+
+2017-04-20 17:21:45,619DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651512' 
+
+2017-04-20 17:21:45,636DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651513' 
+
+2017-04-20 17:21:45,653DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651514' 
+
+2017-04-20 17:21:45,670DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT city.region_id AS `id`, city.region_name AS `regionName` FROM city WHERE city.parent_id =  '1651545' 
+
+2017-04-20 17:22:39,762INFO [com.jdkhome.autoolk.dao.SqlHelper.insert(SqlHelper.java:93)] insert into City(region_id,region_name)value( '2333' , '测试城市' )
+
+2017-04-20 17:22:41,223DEBUG [com.jdkhome.autoolk.dao.SqlHelper.update(SqlHelper.java:124)] UPDATE city SET city.region_name =  '城市asd'  WHERE region_id =  '2333' 
+
+2017-04-20 17:22:41,241DEBUG [com.jdkhome.autoolk.dao.SqlHelper.update(SqlHelper.java:124)] DELETE FROM city WHERE region_id =  '2333' 
+
+2017-04-20 17:22:41,257DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT count(1) as `count` FROM city
+
+2017-04-20 17:24:37,740INFO [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669)] {dataSource-1} inited
+
+2017-04-20 17:24:37,823DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT * FROM userbots
+
+2017-04-20 17:29:17,205INFO [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669)] {dataSource-1} inited
+
+2017-04-20 17:29:17,288DEBUG [com.jdkhome.autoolk.dao.SqlHelper.executeQuery(SqlHelper.java:155)] SELECT * FROM userbots
+
+2017-04-21 17:37:44,723INFO [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669)] {dataSource-1} inited
+
+2017-04-21 17:37:44,835INFO [com.jdkhome.autoolk.dao.SqlHelper.insert(SqlHelper.java:94)] insert into City(region_id,region_name)value( '2333' , '测试城市' )
+
+2017-04-21 17:43:59,508INFO [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669)] {dataSource-1} inited
+
+2017-04-21 17:43:59,580INFO [com.jdkhome.autoolk.dao.SqlHelper.insert(SqlHelper.java:94)] insert into Userbots(userid)value( '88888' )
+
+2017-04-21 17:44:43,313INFO [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669)] {dataSource-1} inited
+
+2017-04-21 17:44:43,386INFO [com.jdkhome.autoolk.dao.SqlHelper.insert(SqlHelper.java:93)] insert into Userbots(userid)value( '88888' )
+
+2017-04-21 17:45:16,122INFO [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669)] {dataSource-1} inited
+
+2017-04-21 17:46:39,917INFO [com.jdkhome.autoolk.dao.SqlHelper.insert(SqlHelper.java:93)] insert into Userbots(userid)value( '88888' )
+
+2017-04-21 17:46:56,569INFO [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669)] {dataSource-1} inited
+
+2017-04-21 17:46:56,641INFO [com.jdkhome.autoolk.dao.SqlHelper.insert(SqlHelper.java:93)] insert into Userbots(userid)value( '88888' )
+
+2017-04-21 17:55:14,764INFO [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669)] {dataSource-1} inited
+
+2017-04-21 17:55:14,854INFO [com.jdkhome.autoolk.dao.SqlHelper.insert(SqlHelper.java:92)] insert into City(region_id,region_name)value( '2333' , '测试城市' )
+
+2017-04-21 17:55:32,386INFO [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669)] {dataSource-1} inited
+
+2017-04-21 17:55:32,456INFO [com.jdkhome.autoolk.dao.SqlHelper.insert(SqlHelper.java:92)] insert into City(region_id,region_name)value( '2333' , '测试城市' )
+
+2017-04-21 17:55:32,471DEBUG [com.jdkhome.autoolk.dao.SqlHelper.update(SqlHelper.java:123)] DELETE FROM city WHERE region_id =  '2333' 
+
+2017-04-21 17:55:52,527INFO [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669)] {dataSource-1} inited
+
+2017-04-21 17:55:52,593INFO [com.jdkhome.autoolk.dao.SqlHelper.insert(SqlHelper.java:92)] insert into City(region_id,region_name)value( '2333' , '测试城市' )
+
+2017-04-21 17:55:52,614DEBUG [com.jdkhome.autoolk.dao.SqlHelper.update(SqlHelper.java:123)] DELETE FROM city WHERE region_id =  '2333' 
+
+2017-04-21 18:17:07,687INFO [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669)] {dataSource-1} inited
+
+2017-04-21 18:17:07,756INFO [com.jdkhome.autoolk.dao.SqlHelper.insert(SqlHelper.java:94)] insert into Userbots(userid)value( '88888' )
+
+2017-04-21 18:20:24,477INFO [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669)] {dataSource-1} inited
+
+2017-04-21 18:20:24,537INFO [com.jdkhome.autoolk.dao.SqlHelper.insert(SqlHelper.java:94)] insert into Userbots(userid)value( '88888' )
+
+2017-04-21 18:23:06,138INFO [com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:669)] {dataSource-1} inited
+
+2017-04-21 18:23:06,200INFO [com.jdkhome.autoolk.dao.SqlHelper.insert(SqlHelper.java:94)] insert into Userbots(userid)value( '88888' )

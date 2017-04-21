@@ -203,7 +203,7 @@ public class Autoolk {
      * @return
      */
     public static Integer insert(String sql, Object[] parameters){
-        return SqlHelper.insert(sql,parameters);
+        return (Integer)SqlHelper.insert(sql,parameters)[0];
     }
 
 
@@ -225,6 +225,8 @@ public class Autoolk {
         String tableName=autoLinkPojo.value().compareTo("")==0?clz.getSimpleName():autoLinkPojo.value();
         sb.append("insert into ").append(tableName);
 
+        //存主键变量名
+        Field primaryKey=null;
 
         Map<String,Object> tableFieldMap=new LinkedHashMap<String,Object>();
 
@@ -234,6 +236,12 @@ public class Autoolk {
             if(field.isAnnotationPresent(AutoLinkInsert.class)) {
                 AutoLinkInsert autoLinkInsert = (AutoLinkInsert) field.getAnnotation(AutoLinkInsert.class);
                 //获取表字段以及对应的值
+
+                //判断是否为主键
+                if(autoLinkInsert.primarykey()){
+                    primaryKey=field;
+                    primaryKey.setAccessible(true);
+                }
 
                 //获取到参数对应字段
                 Object val=null;
@@ -246,6 +254,7 @@ public class Autoolk {
                 }
                 tableFieldMap.put(autoLinkInsert.value().compareTo("")==0?field.getName():autoLinkInsert.value(),val);
             }
+
         }
         sb.append("(");
         for (Iterator it =  tableFieldMap.keySet().iterator();it.hasNext();){
@@ -272,8 +281,13 @@ public class Autoolk {
 
         }
 
+        Object[] result=SqlHelper.insert(sb.toString(),parameters);
+        if(primaryKey!=null){
+            primaryKey.set(obj,result[1]);
+        }
+
         //插入
-        return insert(sb.toString(),parameters);
+        return (Integer)result[0];
     }
 
     /**

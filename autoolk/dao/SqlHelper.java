@@ -8,6 +8,7 @@ import java.sql.*;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 
 public class SqlHelper {
@@ -65,25 +66,25 @@ public class SqlHelper {
 	 * @param parameters
 	 * @return 正常返回主键id 失败返回null
 	 */
-	public static Integer insert(String sql, Object[] parameters){
+	public static Object[] insert(String sql, Object[] parameters){
 		Connection conn=null;
 		PreparedStatement thisPs=null;
+		Object result[]=new Object[2];
 		try {
 			conn =getConnectionFromDruid();
-			thisPs=conn.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);//获取一个新的PreparedStatement
+			thisPs=conn.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
 			if (parameters != null) {
 				for (int i = 0; i < parameters.length; i++) {
 					thisPs.setObject(i + 1, parameters[i]);
 				}
 			}
-			thisPs.executeUpdate();
-           /* todo 不知道为啥取不到返回值
-           ResultSet resultSet=thisPs.getGeneratedKeys();
-            if(resultSet.next()){
-                return thisPs.getGeneratedKeys().getInt(1);
-            }*/
-            return null;
+			result[0]=thisPs.executeUpdate();
 
+            ResultSet resultSet=thisPs.getGeneratedKeys();
+            if(resultSet.next()){
+				result[1]=resultSet.getObject(1);
+            }
+            return result;
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -156,7 +157,7 @@ public class SqlHelper {
 		}
 
 		//将查询结果和连接都返回出去，外部可以继续使用链接
-		Map< String, Object> mapCR=new HashMap< String, Object>();
+		Map< String, Object> mapCR=new TreeMap< String, Object>();
 		mapCR.put("rs", rs);
 		mapCR.put("conn", conn);
 		return mapCR;
